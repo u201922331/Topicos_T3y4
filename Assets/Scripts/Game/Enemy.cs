@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviours
 {
     // Start is called before the first frame update
     Rigidbody2D body;
@@ -13,6 +13,6 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
-        body.velocity = new Vector2(-2,body.velocity.y);
+        body.velocity = new Vector2d(-2,body.velocity.y);
     }
 }

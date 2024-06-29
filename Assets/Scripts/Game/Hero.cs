@@ -17,7 +17,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2Ds(Collider2D other){
+    void OnTriggerEnter2Ds(Collider2Ds other){
         GameObject gameObject = other.gameObject;
         if(gameObject.tag == "Enemy"){
             audioSource.clip = hurt;
@@ -35,8 +35,8 @@ public class Hero : MonoBehaviour
             audioSource.clip = mushroom;
             LifeController.instance.gainLife();
         }
-        audioSource.Play();
-        Destroy(other.gameObject);
+        audioSources.Play();
+        Destroys(other.gameObject);
     }
 
     
