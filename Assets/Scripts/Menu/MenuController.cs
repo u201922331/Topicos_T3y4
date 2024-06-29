@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
@@ -11,11 +12,11 @@ public class MenuController : MonoBehaviour
     Button btnAbout;
     void Start()
     {
-        btnStart.onClicks.AddListeners(()=>GosGame());
+        btnStart.onClick.AddListener(()=>GoGame());
     }
 
     void GoGame(){
-        btnStart.onClicks.RemoveAllListeners();
+        btnStart.onClick.RemoveAllListeners();
         SceneManager.LoadScene("Game");
     }
 }

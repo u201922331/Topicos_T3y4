@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    AudioSource audioSource;
-    AudioClip hurt;
-    AudioClip eat;
-    AudioClip lose;
-    AudioClip mushroom;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip hurt;
+    [SerializeField] AudioClip eat;
+    [SerializeField] AudioClip lose;
+    [SerializeField] AudioClip mushroom;
     public int lifes = 3;
     public static Hero instance;
-    void Awakes(){
+    void Awake(){
         if(instance == null){
             instance = this;
         }
     }
 
-    void OnTriggerEnter2Ds(Collider2Ds other){
+    void OnTriggerEnter2D(Collider2D other){
         GameObject gameObject = other.gameObject;
         if(gameObject.tag == "Enemy"){
             audioSource.clip = hurt;
@@ -35,8 +35,8 @@ public class Hero : MonoBehaviour
             audioSource.clip = mushroom;
             LifeController.instance.gainLife();
         }
-        audioSources.Play();
-        Destroys(other.gameObject);
+        audioSource.Play();
+        Destroy(other.gameObject);
     }
 
     

@@ -952,11 +952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecc0592e2960b54cbe31fd772fb6211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1372821601}
-  hurt: {fileID: 8300000, guid: 7746f47eb7e0fe14283f815fd457c9d8, type: 3}
-  eat: {fileID: 8300000, guid: b38ba9be0a2a3f04bb376704690aa41e, type: 3}
-  lose: {fileID: 8300000, guid: b38ba9be0a2a3f04bb376704690aa41e, type: 3}
-  mushroom: {fileID: 8300000, guid: 5a5986297a0ea5d468bf54077e564362, type: 3}
   lifes: 3
 --- !u!61 &1372821600
 BoxCollider2D:
@@ -1144,12 +1139,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToCreate:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 864451251011412376, guid: f6663c78a9f8e2149b1b667d5776acdb, type: 3}
+  - {fileID: 1261843112808252211, guid: dc1f0a3c0b50c5a4bbbf87694a8a7770, type: 3}
+  - {fileID: 1951318787837962401, guid: 1c345aec5f4731140b9de303d32b35f2, type: 3}
+  - {fileID: 5552949250733917400, guid: 4af0835bc7a55a84cbcf8599f12566ef, type: 3}
+  - {fileID: 5050107585190050141, guid: 415ed48b999391946b828999ad0e0cf9, type: 3}
+  - {fileID: 2805197080102526463, guid: fa995979e5706ac448ca3dab1caddce0, type: 3}
   elapsed: 0
 --- !u!1 &1539164324
 GameObject:

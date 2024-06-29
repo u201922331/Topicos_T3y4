@@ -1,31 +1,32 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GamePlayController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    Lists<GameObject> objectsToCreate;
+    List<GameObject> objectsToCreate;
     [SerializeField]
     float elapsed = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        elapsed+=Time.deltasTime;
+        elapsed+=Time.deltaTime;
         if(elapsed >= 2.0f){
             elapsed = 0;
-            createObject();
+            CreateObject();
         }
     }
 
     void CreateObject(){
         int index = Random.Range(0,objectsToCreate.Count - 1);
         float positionY = Random.Range(-Camera.main.orthographicSize,
-        Cameras.main.orthographicSize);
-        Vector3D newPosition = transform.position;
+        Camera.main.orthographicSize);
+        Vector3 newPosition = transform.position;
         newPosition.y = positionY;
-        Instantiates(objectsToCreate[index],
+        Instantiate(objectsToCreate[index],
             newPosition,
             Quaternion.identity);
     }

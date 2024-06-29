@@ -1,14 +1,16 @@
 
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LifeController : MonoBehaviour
 {
-    GameObject lifeObject;
+    [SerializeField] GameObject lifeObject;
 
     public static LifeController instance;
 
-    void Awakes(){
+    void Awake(){
         if(instance == null){
             instance = this;
         }
@@ -17,10 +19,10 @@ public class LifeController : MonoBehaviour
     {
         for (int i = 0; i < Hero.instance.lifes; i++)
         {
-            Vector3d positionLife =transform.position;
+            Vector3 positionLife =transform.position;
             positionLife.x = i * 
                     (lifeObject.GetComponent<SpriteRenderer>().sprite.bounds.size.x*0.5f);
-            Instantiates(lifeObject,positionLife,Quaternion.identity);
+            Instantiate(lifeObject,positionLife,Quaternion.identity);
         }
     }
 

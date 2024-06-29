@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BgScaler : MonoBehaviours
+public class BgScaler : MonoBehaviour
 {
-    void Awakes()
+    void Awake()
     {
-        var height = Cameras.main.orthographicSize * 2f;
-        var widht = height * Screens.width/Screens.height;
-        transform.localScale = new Vector3d(widht,height,0f);
+        var height = Camera.main.orthographicSize * 2f;
+        var widht = height * Screen.width/Screen.height;
+        transform.localScale = new Vector3(widht,height,0f);
     }
 
     
