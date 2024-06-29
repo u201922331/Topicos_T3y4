@@ -952,6 +952,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecc0592e2960b54cbe31fd772fb6211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 1372821601}
+  hurt: {fileID: 8300000, guid: 7746f47eb7e0fe14283f815fd457c9d8, type: 3}
+  eat: {fileID: 8300000, guid: b38ba9be0a2a3f04bb376704690aa41e, type: 3}
+  lose: {fileID: 8300000, guid: 11de8d87a072bb94494dfe1e558c1e0e, type: 3}
+  mushroom: {fileID: 8300000, guid: 5a5986297a0ea5d468bf54077e564362, type: 3}
   lifes: 3
 --- !u!61 &1372821600
 BoxCollider2D:
